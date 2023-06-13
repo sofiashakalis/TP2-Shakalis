@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+}
+
+nav {
+    color: white;
+    width: 100vw;
+    height: 16vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(36, 36, 36);
+    left: 0;
+    top: 16vh;
+    padding: 2vw;
+    width: 100vw;
+}
+
+nav div {
+    display: flex;
+    width: 24.11%;
+    justify-content: space-between;
+}
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 150vh;
+    margin-bottom: 20px;
+}
+
+.lightboxOverlay {
+background-color:black;
+}
+
+section div {
+    width: 45.83%;
+}
+
+section div img,
+video {
+    width: 100%;
+}
+
+header {
+    height: 43vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
+}
+
+header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+header h3 {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header a {
+    background-color: #212529;
+}
+
+nav span {
+    display: none;
+}
+
+.icon-menu::before {
+    color: white;
+    font-size: 4vw;
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+@media(max-width: 1200px) {
+
+    nav div {
+        width: 50%;
+    }
+    main section {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        height: auto;
+    }
+
+    section div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav div {
+        display: none;
+    }
+
+    nav span {
+        display: inline;
+    }
+}
+
+nav a:hover {
+    opacity: 50%;
+}
+
+header a:hover {
+    opacity: 50%;
+}
+
+section p:hover {
+    opacity: 50%;
+}
+
+nav h1.animacion-header,
+nav #navega {
+    animation: fadeIn ease 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header #nombre {
+    animation: fadeIn2 ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn2 {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+header #bajada, img, video {
+    opacity: 0;
+    animation: fadeIn3 ease 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+img:hover {
+    scale: 1.1;
+    filter: brightness(0.8);
+    transition: all 1s ease;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    height: 200px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
